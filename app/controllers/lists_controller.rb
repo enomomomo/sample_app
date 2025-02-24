@@ -10,10 +10,11 @@ class ListsController < ApplicationController
     # 3. データをデータベースに保存するためのsaveメソッド実行
     list.save
     # 4. トップ画面へリダイレクト
-    redirect_to '/homes/top'
+    redirect_to '/top'
   end
 
   def index
+    @lists = List.all
   end
 
   def show
